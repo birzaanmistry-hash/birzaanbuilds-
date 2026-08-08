@@ -1,14 +1,16 @@
 export const profile = {
   name: "Birzaan Mistry",
-  tagline: "AI Workflow Builder | Business Developer | Founder, Tasklyn.in",
+  taglines: ["AI Workflow Builder", "Business Developer", "Founder, Tasklyn.in"],
   age: 18,
   location: "Mumbai, India",
   email: "birzaanmistry@gmail.com",
   phone: "+91 9930226026",
   whatsapp: "https://wa.me/919930226026",
   website: "https://tasklyn.in",
+  oneLiner:
+    "I build production AI systems that save real businesses real time and real money — not vague automations, but tools with a UI clients actually use.",
   summary:
-    "18-year-old AI entrepreneur who builds and deploys production AI workflows for real businesses. Founder of Tasklyn.in, with hands-on experience in business development, sales, operations, client acquisition, and cold calling. I build systems and CRMs that actually save businesses time and help them generate better revenue. 5+ AI workflows deployed, 2 startups founded, state-level athlete. Looking for internships in Business Development, AI/Workflow Building, Web Design, Sales, and Operations.",
+    "18-year-old AI entrepreneur building production AI workflows for real businesses. Founder of Tasklyn.in, with hands-on experience in business development, sales, operations, client acquisition, and cold calling. I build systems and CRMs that actually save businesses time and help them generate better revenue — production-grade tools with a real front end, not vague automations. 5+ AI workflows deployed, 2 startups founded, state-level athlete. Looking for internships in Business Development, AI/Workflow Building, Web Design, Sales, and Operations.",
 };
 
 export const skills = [
@@ -54,36 +56,41 @@ export const projects = [
   {
     title: "WhatsApp AI Parts Ordering Agent",
     type: "AI Agent | Automotive",
+    metric: "3–5 hrs saved / day",
     description:
-      "Built an AI agent on WhatsApp that identifies auto parts from natural language, checks inventory via API, returns pricing & availability. Handles 80% of inquiries without human intervention, saves 3-5 hrs/day.",
+      "An AI agent on WhatsApp that identifies auto parts from natural language, checks live inventory via API, and returns pricing & availability. Handles 80% of inquiries without a human.",
     tools: ["n8n", "WhatsApp API", "GPT-4", "Google Sheets", "REST APIs"],
   },
   {
     title: "AI Dental Receptionist",
     type: "AI Agent | Healthcare",
+    metric: "24/7 coverage",
     description:
-      "24/7 AI receptionist for dental clinics handling WhatsApp & website chat — books appointments, answers FAQs, syncs to Google Calendar. Reduced no-shows via automated reminders.",
+      "A 24/7 AI receptionist for dental clinics handling WhatsApp & website chat — books appointments, answers FAQs, syncs to Google Calendar, and cuts no-shows with automated reminders.",
     tools: ["n8n", "OpenAI", "WhatsApp API", "Google Calendar", "Twilio"],
   },
   {
     title: "Lead Qualification & CRM Auto-Enrichment",
     type: "Sales Automation",
+    metric: "20 min → 0 min",
     description:
-      "Auto-enriches leads via Apollo.io, scores by company size & intent, adds to CRM, sends personalized intro email — all in under 60 seconds. Cuts lead research from 20 min to 0.",
+      "Auto-enriches leads via Apollo.io, scores them by company size & intent, adds them to the CRM, and sends a personalized intro email — all in under 60 seconds per lead.",
     tools: ["n8n", "Apollo.io", "HubSpot CRM", "OpenAI", "Slack", "Gmail"],
   },
   {
     title: "AI Social Media Content Engine",
     type: "Marketing Automation",
+    metric: "7 days in 3 min",
     description:
-      "GPT-4 generates a week of posts from a single topic, Telegram approval, auto-scheduled to Buffer. 7 days of content in 3 minutes. Used by 2 active clients.",
+      "GPT-4 turns a single topic into a week of posts, routes them through Telegram for approval, and auto-schedules to Buffer. Currently running for 2 active clients.",
     tools: ["n8n", "GPT-4", "Telegram", "Buffer", "Google Sheets"],
   },
   {
     title: "Real Estate Video-to-CRM Pipeline",
     type: "AI Data Extraction",
+    metric: "45 min → 2 min",
     description:
-      "Transcribes video via Whisper, extracts structured property/investor data with GPT-4, auto-populates CRM. 45-min video to structured data in 2 minutes.",
+      "Transcribes a walkthrough video via Whisper, extracts structured property and investor data with GPT-4, and auto-populates the CRM — no manual data entry.",
     tools: ["n8n", "Whisper", "GPT-4", "HubSpot", "Google Drive"],
   },
 ];
@@ -91,15 +98,15 @@ export const projects = [
 export const ventures = [
   {
     name: "Tasklyn.in",
-    type: "AI Startup",
-    period: "Founded Nov 2025 | Active",
+    role: "Founder",
+    period: "Nov 2025 — Active",
     description:
-      "Building AI agents and automated systems for businesses. Solo bootstrapped — handles product development, client acquisition, web hosting, and sales.",
+      "Building AI agents and automated systems for businesses. Solo bootstrapped — product development, client acquisition, web hosting, and sales.",
   },
   {
     name: "Galaxia Enterprises",
-    type: "Bootstrap Venture",
-    period: "2023-2024",
+    role: "Co-Founder",
+    period: "2023 — 2024",
     description:
       "Co-founded and managed business development, client negotiations, and end-to-end operations.",
   },
@@ -107,26 +114,38 @@ export const ventures = [
 
 export const achievements = [
   {
+    icon: "medal",
     label: "Boxing",
-    detail: "State-Level Silver Medalist | 10+ District & State Victories | Maharashtra",
+    stat: "State-Level Silver",
+    detail: "10+ district & state victories, Maharashtra",
   },
-  { label: "Football", detail: "Selected for National Football Trials 2023" },
-  { label: "Sprinting", detail: "Competitive 100m & 200m Track Athlete" },
+  {
+    icon: "ball",
+    label: "Football",
+    stat: "National Trials",
+    detail: "Selected for National Football Trials, 2023",
+  },
+  {
+    icon: "bolt",
+    label: "Sprinting",
+    stat: "100m & 200m",
+    detail: "Competitive track athlete",
+  },
 ];
 
 export const certifications = [
-  {
-    name: "AI Bootcamp, Outskill",
-    period: "Completed",
-  },
-  {
-    name: "HubSpot Sales Training",
-    period: "Apr 2026 - Present",
-  },
-  {
-    name: "Agentic AI Mastery Program, Haus Of Intelligence",
-    period: "Apr 2026 - Present",
-  },
+  { name: "AI Advanced Bootcamp, Outskill", status: "Completed" },
+  { name: "HubSpot Sales Training", status: "In Progress" },
+  { name: "Agentic AI Mastery Program, Haus Of Intelligence", status: "In Progress" },
 ];
 
 export const education = [{ degree: "Grade 12 Commerce", location: "Mumbai, India" }];
+
+export const nav = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Ventures", href: "#ventures" },
+  { label: "Contact", href: "#contact" },
+];

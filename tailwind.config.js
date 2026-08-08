@@ -4,15 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: "#0a0a0a",
-        surface: "#121212",
-        border: "#232323",
-        accent: "#f97316",
-        muted: "#9a9a9a",
+        bg: "#07080a",
+        surface: "#0e1015",
+        surface2: "#14171d",
+        border: "#20242c",
+        accent: "#3d7fff",
+        "accent-soft": "#3d7fff1f",
+        text: "#f2f4f7",
+        muted: "#8b93a1",
       },
       fontFamily: {
-        mono: ["'JetBrains Mono'", "'Fira Code'", "ui-monospace", "monospace"],
+        display: ["'Sora'", "system-ui", "sans-serif"],
         sans: ["'Inter'", "system-ui", "sans-serif"],
+      },
+      maxWidth: {
+        content: "72rem",
       },
     },
   },

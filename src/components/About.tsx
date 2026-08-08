@@ -1,10 +1,15 @@
 import { profile } from "../data/resume";
+import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="section border-b border-border">
-      <h2 className="section-heading">Summary</h2>
-      <p className="max-w-3xl text-lg leading-relaxed text-white/90">{profile.summary}</p>
+    <section id="about" className="section border-t border-border">
+      <Reveal>
+        <p className="eyebrow">About</p>
+        <p className="max-w-3xl text-balance text-2xl font-medium leading-relaxed text-text sm:text-3xl">
+          {profile.summary}
+        </p>
+      </Reveal>
     </section>
   );
 }
