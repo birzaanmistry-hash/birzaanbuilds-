@@ -7,6 +7,7 @@ export const profile = {
   phone: "+91 9930226026",
   whatsapp: "https://wa.me/919930226026",
   website: "https://tasklyn.in",
+  resumeUrl: "/Birzaan-Mistry-Resume.pdf",
 };
 
 export const skills = [
@@ -50,44 +51,59 @@ export const skills = [
 
 export const projects = [
   {
+    tag: "AI Agent · Automotive",
     title: "WhatsApp AI Parts Ordering Agent",
-    type: "AI Agent | Automotive",
-    metric: "3–5 hrs saved / day",
     description:
-      "An AI agent on WhatsApp that identifies auto parts from natural language, checks live inventory via API, and returns pricing & availability. Handles 80% of inquiries without a human.",
-    tools: ["n8n", "WhatsApp API", "GPT-4", "Google Sheets", "REST APIs"],
+      "Conversational WhatsApp agent that lets workshops order spare parts in natural language and routes orders straight to the distributor.",
+    stat: "80%",
+    statCaption: "Of orders fully automated",
+    detail:
+      "Built for production — handles edge cases, logs every run, and pages me on failure. Designed to drop into an existing team's stack with zero overhead.",
+    tools: ["n8n", "WhatsApp Cloud API", "OpenAI", "Airtable"],
   },
   {
+    tag: "Voice AI · Healthcare",
     title: "AI Dental Receptionist",
-    type: "AI Agent | Healthcare",
-    metric: "24/7 coverage",
     description:
-      "A 24/7 AI receptionist for dental clinics handling WhatsApp & website chat — books appointments, answers FAQs, syncs to Google Calendar, and cuts no-shows with automated reminders.",
-    tools: ["n8n", "OpenAI", "WhatsApp API", "Google Calendar", "Twilio"],
+      "24/7 voice agent that books, reschedules, and confirms dental appointments — handing structured data straight to the clinic's calendar.",
+    stat: "24/7",
+    statCaption: "Front-desk coverage",
+    detail:
+      "Live in production — captures every call, syncs instantly to the calendar, and escalates anything it can't resolve straight to the front desk.",
+    tools: ["Voice AI", "OpenAI", "Google Calendar", "Twilio"],
   },
   {
+    tag: "Sales Automation · B2B",
     title: "Lead Qualification & CRM Auto-Enrichment",
-    type: "Sales Automation",
-    metric: "20 min → 0 min",
     description:
-      "Auto-enriches leads via Apollo.io, scores them by company size & intent, adds them to the CRM, and sends a personalized intro email — all in under 60 seconds per lead.",
-    tools: ["n8n", "Apollo.io", "HubSpot CRM", "OpenAI", "Slack", "Gmail"],
+      "Enriches every inbound lead via Apollo.io, scores it by company size and intent, and pushes it into the CRM with a personalized intro email already sent.",
+    stat: "<60s",
+    statCaption: "From new lead to CRM",
+    detail:
+      "Runs unattended — deduplicates against existing records, logs enrichment confidence, and flags anything ambiguous for manual review.",
+    tools: ["n8n", "Apollo.io", "HubSpot CRM", "OpenAI"],
   },
   {
+    tag: "Content Ops · Marketing",
     title: "AI Social Media Content Engine",
-    type: "Marketing Automation",
-    metric: "7 days in 3 min",
     description:
-      "GPT-4 turns a single topic into a week of posts, routes them through Telegram for approval, and auto-schedules to Buffer. Currently running for 2 active clients.",
-    tools: ["n8n", "GPT-4", "Telegram", "Buffer", "Google Sheets"],
+      "Turns a single topic into a week of on-brand posts, routes them through Telegram for approval, and auto-schedules the finals to Buffer.",
+    stat: "3 min",
+    statCaption: "For a full week of content",
+    detail:
+      "In active use by two clients — every post is versioned, approvals are logged, and nothing publishes without a human sign-off.",
+    tools: ["n8n", "GPT-4", "Telegram", "Buffer"],
   },
   {
+    tag: "CRM Ops · D2C E-commerce",
     title: "D2C Delivery Confidence & Retention Engine",
-    type: "CRM System | D2C E-commerce",
-    metric: "Confidence + retention, automated",
     description:
-      "A delivery-confidence and customer-retention system built inside an organized CRM for a D2C brand — tracks every order from dispatch to doorstep, proactively resolves delivery anxiety, and triggers post-delivery flows that bring customers back.",
-    tools: ["n8n", "CRM", "WhatsApp API", "Shipping APIs", "Email/SMS"],
+      "Tracks every D2C order from dispatch to doorstep inside one CRM, proactively resolving delivery anxiety before it turns into a support ticket.",
+    stat: "End-to-end",
+    statCaption: "Dispatch to repeat order, automated",
+    detail:
+      "Built around the CRM the team already runs on — triggers post-delivery retention flows automatically and needs zero manual follow-up.",
+    tools: ["n8n", "CRM", "WhatsApp API", "Shipping APIs"],
   },
 ];
 

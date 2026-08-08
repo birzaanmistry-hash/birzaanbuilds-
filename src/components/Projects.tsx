@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../data/resume";
 import Reveal from "./Reveal";
-import { ChevronIcon } from "./icons";
+import { ArrowUpRightIcon, ChevronIcon } from "./icons";
 
 export default function Projects() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <section id="projects" className="section border-t border-border">
@@ -19,62 +18,57 @@ export default function Projects() {
         </p>
       </Reveal>
 
-      <div className="grid gap-5">
+      <div className="grid gap-5 lg:grid-cols-2">
         {projects.map((project, i) => {
-          const isOpen = openIndex === i;
+          const isActive = activeIndex === i;
           return (
-            <Reveal key={project.title} delay={i * 0.06}>
-              <div className={`card overflow-hidden ${isOpen ? "border-accent/40" : "hover:border-accent/30"}`}>
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : i)}
-                  aria-expanded={isOpen}
-                  className="flex w-full flex-col gap-4 p-6 text-left sm:flex-row sm:items-center sm:justify-between"
-                >
-                  <div className="flex-1">
-                    <div className="mb-2 flex flex-wrap items-center gap-3">
-                      <h3 className="font-display text-lg font-semibold text-text">{project.title}</h3>
-                      <span className="pill !border-accent/30 !text-accent">{project.type}</span>
-                    </div>
-                    <p className="text-sm text-muted sm:hidden">{project.description}</p>
+            <Reveal key={project.title} delay={(i % 2) * 0.08}>
+              <button
+                onClick={() => setActiveIndex(isActive ? null : i)}
+                aria-pressed={isActive}
+                className={`card flex h-full w-full flex-col p-7 text-left ${
+                  isActive ? "border-accent/60" : "hover:border-accent/30"
+                }`}
+              >
+                <div className="mb-5 flex items-start justify-between gap-4">
+                  <div>
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                      {project.tag}
+                    </p>
+                    <h3 className="font-display text-2xl font-bold leading-tight text-text">
+                      {project.title}
+                    </h3>
                   </div>
+                  <span
+                    className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-colors ${
+                      isActive ? "border-accent text-accent" : "border-border text-muted"
+                    }`}
+                  >
+                    {isActive ? <ChevronIcon className="h-4 w-4" /> : <ArrowUpRightIcon className="h-3.5 w-3.5" />}
+                  </span>
+                </div>
 
-                  <div className="flex items-center gap-6">
-                    <span className="whitespace-nowrap font-display text-xl font-bold text-accent sm:text-2xl">
-                      {project.metric}
+                <p className="text-sm leading-relaxed text-muted">{project.description}</p>
+
+                <div className="my-6 border-t border-border pt-6">
+                  <p className="font-serif text-4xl font-medium text-accent sm:text-5xl">{project.stat}</p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
+                    {project.statCaption}
+                  </p>
+                </div>
+
+                <p className="mb-6 border-t border-border pt-6 text-sm leading-relaxed text-muted">
+                  {project.detail}
+                </p>
+
+                <div className="mt-auto flex flex-wrap gap-2">
+                  {project.tools.map((tool) => (
+                    <span key={tool} className="pill text-[11px]">
+                      {tool}
                     </span>
-                    <ChevronIcon
-                      className={`h-5 w-5 shrink-0 text-muted transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </div>
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="overflow-hidden"
-                    >
-                      <div className="border-t border-border px-6 pb-6 pt-5">
-                        <p className="mb-4 hidden max-w-2xl text-sm leading-relaxed text-muted sm:block">
-                          {project.description}
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                          {project.tools.map((tool) => (
-                            <span key={tool} className="pill text-[11px]">
-                              {tool}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                  ))}
+                </div>
+              </button>
             </Reveal>
           );
         })}

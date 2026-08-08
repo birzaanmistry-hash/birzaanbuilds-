@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         display: ["'Sora'", "system-ui", "sans-serif"],
+        serif: ["'Fraunces'", "ui-serif", "Georgia", "serif"],
         sans: ["'Inter'", "system-ui", "sans-serif"],
       },
       maxWidth: {

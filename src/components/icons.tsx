@@ -57,6 +57,35 @@ export function ChevronIcon({ className }: IconProps) {
   );
 }
 
+export function ArrowUpRightIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" strokeWidth={2} className={`${base} ${className ?? ""}`}>
+      <path d="M7 17 17 7M9 7h8v8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function DownloadIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" strokeWidth={1.75} className={`${base} ${className ?? ""}`}>
+      <path d="M12 4v11m0 0 4-4m-4 4-4-4" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M5 18v1.5A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V18" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function ChatIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" strokeWidth={1.75} className={`${base} ${className ?? ""}`}>
+      <path
+        d="M4 12a8 8 0 1 1 3.3 6.4L4 19.5l1.1-3.2A7.96 7.96 0 0 1 4 12Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function MenuIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" strokeWidth={1.75} className={`${base} ${className ?? ""}`}>
