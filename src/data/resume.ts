@@ -7,8 +7,6 @@ export const profile = {
   phone: "+91 9930226026",
   whatsapp: "https://wa.me/919930226026",
   website: "https://tasklyn.in",
-  oneLiner:
-    "I build production AI systems that save real businesses real time and real money — not vague automations, but tools with a UI clients actually use.",
 };
 
 export const skills = [
