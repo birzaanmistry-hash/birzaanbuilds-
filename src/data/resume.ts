@@ -7,7 +7,6 @@ export const profile = {
   phone: "+91 9930226026",
   whatsapp: "https://wa.me/919930226026",
   website: "https://tasklyn.in",
-  resumeUrl: "/Birzaan-Mistry-Resume.pdf",
 };
 
 export const skills = [

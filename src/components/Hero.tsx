@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { profile } from "../data/resume";
-import { MailIcon, PhoneIcon, PinIcon, ChevronIcon, ChatIcon, DownloadIcon } from "./icons";
+import { useTypewriter } from "../hooks/useTypewriter";
+import { MailIcon, PhoneIcon, PinIcon, ChevronIcon, ChatIcon } from "./icons";
 
 export default function Hero() {
+  const tagline = useTypewriter(profile.taglines);
+
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-24">
       <div
@@ -36,22 +39,15 @@ export default function Hero() {
           Mistry
         </motion.h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-5 font-display text-xl font-semibold text-text sm:text-2xl"
+          className="mt-5 h-8 font-display text-xl font-semibold text-accent sm:text-2xl"
         >
-          Founder,{" "}
-          <a
-            href={profile.website}
-            target="_blank"
-            rel="noreferrer"
-            className="text-accent underline decoration-accent/50 underline-offset-4 hover:decoration-accent"
-          >
-            Tasklyn.in
-          </a>
-        </motion.p>
+          {tagline}
+          <span className="ml-1 inline-block w-[2px] animate-pulse bg-accent align-middle" style={{ height: "1.1em" }} />
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -77,10 +73,6 @@ export default function Hero() {
           <a href={profile.whatsapp} target="_blank" rel="noreferrer" className="btn-secondary">
             <ChatIcon className="h-4 w-4" />
             Contact Me
-          </a>
-          <a href={profile.resumeUrl} download className="btn-outline">
-            <DownloadIcon className="h-4 w-4" />
-            Download Resume (PDF)
           </a>
         </motion.div>
 
