@@ -82,12 +82,12 @@ export const projects = [
     tools: ["n8n", "GPT-4", "Telegram", "Buffer", "Google Sheets"],
   },
   {
-    title: "Real Estate Video-to-CRM Pipeline",
-    type: "AI Data Extraction",
-    metric: "45 min → 2 min",
+    title: "D2C Delivery Confidence & Retention Engine",
+    type: "CRM System | D2C E-commerce",
+    metric: "Confidence + retention, automated",
     description:
-      "Transcribes a walkthrough video via Whisper, extracts structured property and investor data with GPT-4, and auto-populates the CRM — no manual data entry.",
-    tools: ["n8n", "Whisper", "GPT-4", "HubSpot", "Google Drive"],
+      "A delivery-confidence and customer-retention system built inside an organized CRM for a D2C brand — tracks every order from dispatch to doorstep, proactively resolves delivery anxiety, and triggers post-delivery flows that bring customers back.",
+    tools: ["n8n", "CRM", "WhatsApp API", "Shipping APIs", "Email/SMS"],
   },
 ];
 
