@@ -11,7 +11,17 @@ export const profile = {
     "I build production AI systems that save real businesses real time and real money — not vague automations, but tools with a UI clients actually use.",
   summary:
     "18-year-old AI entrepreneur building production AI workflows for real businesses. Founder of Tasklyn.in, with hands-on experience in business development, sales, operations, client acquisition, and cold calling. I build systems and CRMs that actually save businesses time and help them generate better revenue — production-grade tools with a real front end, not vague automations. 5+ AI workflows deployed, 2 startups founded, state-level athlete. Looking for internships in Business Development, AI/Workflow Building, Web Design, Sales, and Operations.",
+  aboutHeadline: "Not a resume. A track record.",
+  aboutBody:
+    "I'm an 18-year-old AI entrepreneur who builds and deploys production AI workflows for real businesses — not prototypes, not vague automations. As founder of Tasklyn.in, I handle the full loop myself: client acquisition, cold calling, negotiation, and the actual engineering behind systems and CRMs that save businesses time and help them make more money. I'm looking for internships in Business Development, AI/Workflow Building, Web Design, Sales, and Operations.",
 };
+
+export const aboutStats = [
+  { value: "5+", label: "AI workflows deployed" },
+  { value: "2", label: "Startups founded" },
+  { value: "18", label: "Years old" },
+  { value: "State-Level", label: "Boxing athlete" },
+];
 
 export const skills = [
   {
