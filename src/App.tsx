@@ -1,6 +1,5 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Ventures from "./components/Ventures";
@@ -13,7 +12,6 @@ export default function App() {
     <div className="min-h-screen bg-bg">
       <Nav />
       <Hero />
-      <About />
       <Skills />
       <Projects />
       <Ventures />
