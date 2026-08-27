@@ -55,9 +55,10 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-5 max-w-2xl text-balance text-lg leading-relaxed text-muted sm:text-xl"
         >
-          {profile.age}-year-old AI entrepreneur shipping production systems that hand businesses{" "}
-          <span className="text-text">back their time</span> — and make their money{" "}
-          <span className="text-text">work harder</span>.
+          {profile.age}-year-old AI generalist and entrepreneur shipping production systems that hand
+          businesses <span className="text-text">back their time</span> — and make their money{" "}
+          <span className="text-text">work harder</span>. I also teach students and developers how to
+          actually use AI in their day-to-day work.
         </motion.p>
 
         <motion.div
