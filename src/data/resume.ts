@@ -1,6 +1,6 @@
 export const profile = {
   name: "Birzaan Mistry",
-  taglines: ["AI Workflow Builder", "Business Developer", "Founder, Tasklyn.in"],
+  taglines: ["AI Generalist", "AI Workflow Builder", "AI Educator", "Founder, Tasklyn.in"],
   age: 18,
   location: "Mumbai, India",
   email: "birzaanmistry@gmail.com",
@@ -28,6 +28,8 @@ export const skills = [
       "Sales",
       "Cold Calling",
       "Client Acquisition",
+      "Performance Marketing",
+      "Paid Ads (Meta & Google)",
       "Operations",
       "Negotiation",
     ],
@@ -113,6 +115,20 @@ export const ventures = [
     period: "Nov 2025 — Active",
     description:
       "Building AI agents and automated systems for businesses. Solo bootstrapped — product development, client acquisition, web hosting, and sales.",
+  },
+  {
+    name: "AI Education",
+    role: "Instructor",
+    period: "Ongoing",
+    description:
+      "Teaching students and developers how to actually use AI in their day-to-day work — practical workflows and tools, not just theory. Across n8n, LLM integrations, and AI agent building.",
+  },
+  {
+    name: "Performance Marketing",
+    role: "Media Buyer",
+    period: "Active",
+    description:
+      "Running paid ad campaigns for gyms — including Midtown Fitness, a fitness franchise — and multiple perfume brands. Creative, targeting, and spend optimization across Meta & Google Ads.",
   },
   {
     name: "Galaxia Enterprises",
