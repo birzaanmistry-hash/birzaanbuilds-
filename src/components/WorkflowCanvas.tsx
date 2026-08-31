@@ -98,7 +98,7 @@ export default function WorkflowCanvas() {
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
-        ctx.strokeStyle = "rgba(61, 127, 255, 0.10)";
+        ctx.strokeStyle = "rgba(61, 127, 255, 0.22)";
         ctx.lineWidth = 1;
         ctx.stroke();
 
@@ -108,19 +108,19 @@ export default function WorkflowCanvas() {
           const py = a.y + (b.y - a.y) * t;
 
           const trail = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
-          trail.addColorStop(Math.max(0, t - 0.14), "rgba(61, 127, 255, 0)");
-          trail.addColorStop(t, "rgba(90, 165, 255, 0.55)");
+          trail.addColorStop(Math.max(0, t - 0.16), "rgba(61, 127, 255, 0)");
+          trail.addColorStop(t, "rgba(110, 180, 255, 0.85)");
           trail.addColorStop(Math.min(1, t + 0.01), "rgba(61, 127, 255, 0)");
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
           ctx.strokeStyle = trail;
-          ctx.lineWidth = 1.6;
+          ctx.lineWidth = 2;
           ctx.stroke();
 
           ctx.beginPath();
-          ctx.arc(px, py, 2.1, 0, Math.PI * 2);
-          ctx.fillStyle = "rgba(140, 190, 255, 0.9)";
+          ctx.arc(px, py, 2.4, 0, Math.PI * 2);
+          ctx.fillStyle = "rgba(180, 215, 255, 1)";
           ctx.fill();
         });
       });
@@ -129,7 +129,7 @@ export default function WorkflowCanvas() {
       nodes.forEach((node) => {
         const breathe = (Math.sin(node.pulse) + 1) / 2;
         const glow = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.r * 7);
-        glow.addColorStop(0, `rgba(61, 127, 255, ${0.20 + breathe * 0.18})`);
+        glow.addColorStop(0, `rgba(61, 127, 255, ${0.28 + breathe * 0.22})`);
         glow.addColorStop(1, "rgba(61, 127, 255, 0)");
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.r * 7, 0, Math.PI * 2);
@@ -138,7 +138,7 @@ export default function WorkflowCanvas() {
 
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(180, 210, 255, ${0.45 + breathe * 0.35})`;
+        ctx.fillStyle = `rgba(190, 220, 255, ${0.6 + breathe * 0.4})`;
         ctx.fill();
       });
     };

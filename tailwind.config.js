@@ -17,6 +17,7 @@ export default {
         display: ["'Sora'", "system-ui", "sans-serif"],
         serif: ["'Fraunces'", "ui-serif", "Georgia", "serif"],
         sans: ["'Inter'", "system-ui", "sans-serif"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "monospace"],
       },
       maxWidth: {
         content: "72rem",
