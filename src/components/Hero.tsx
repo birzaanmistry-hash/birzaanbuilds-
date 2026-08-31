@@ -49,6 +49,12 @@ export default function Hero({ ready }: { ready: boolean }) {
         style={{ y: contentY, opacity: contentOpacity }}
         className="section relative w-full py-0"
       >
+        {/* Settles out of the boot sequence: you land into the page */}
+        <motion.div
+          initial={{ scale: 1.07, filter: "blur(8px)" }}
+          animate={ready ? { scale: 1, filter: "blur(0px)" } : { scale: 1.07 }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        >
         <motion.div
           initial="hidden"
           animate={ready ? "shown" : "hidden"}
@@ -95,12 +101,13 @@ export default function Hero({ ready }: { ready: boolean }) {
           <motion.p
             variants={ENTER}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-5 max-w-2xl text-balance text-lg leading-relaxed text-muted sm:text-xl"
+            className="mt-5 max-w-2xl text-balance font-display text-lg font-normal leading-[1.65] tracking-[-0.01em] text-muted sm:text-xl"
           >
-            {profile.age}-year-old AI generalist and entrepreneur shipping production systems that hand
-            businesses <span className="text-text">back their time</span> — and make their money{" "}
-            <span className="text-text">work harder</span>. I also teach students and developers how to
-            actually use AI in their day-to-day work.
+            {profile.age}-year-old <span className="text-text">AI generalist and consultant</span>{" "}
+            shipping production systems that hand businesses{" "}
+            <span className="text-text">back their time</span> — and make their money{" "}
+            <span className="text-text">work harder</span>. I consult with businesses on where AI
+            actually fits, and teach students and developers how to use it day to day.
           </motion.p>
 
           <motion.div
@@ -141,6 +148,7 @@ export default function Hero({ ready }: { ready: boolean }) {
               <PinIcon className="h-4 w-4" /> {profile.location}
             </span>
           </motion.div>
+        </motion.div>
         </motion.div>
       </motion.div>
 
