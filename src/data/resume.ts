@@ -1,6 +1,12 @@
 export const profile = {
   name: "Birzaan Mistry",
-  taglines: ["AI Generalist", "AI Workflow Builder", "AI Educator", "Founder, Tasklyn.in"],
+  taglines: [
+    "AI Generalist",
+    "AI Consultant",
+    "AI Workflow Builder",
+    "AI Educator",
+    "Founder, Tasklyn.in",
+  ],
   age: 18,
   location: "Mumbai, India",
   email: "birzaanmistry@gmail.com",

@@ -14,9 +14,9 @@ export default {
         muted: "#8b93a1",
       },
       fontFamily: {
-        display: ["'Sora'", "system-ui", "sans-serif"],
-        serif: ["'Fraunces'", "ui-serif", "Georgia", "serif"],
-        sans: ["'Inter'", "system-ui", "sans-serif"],
+        display: ["'Geist Sans'", "system-ui", "sans-serif"],
+        sans: ["'Geist Sans'", "system-ui", "sans-serif"],
+        mono: ["'Geist Mono'", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       maxWidth: {
         content: "72rem",
