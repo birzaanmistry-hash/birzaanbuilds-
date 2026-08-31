@@ -20,7 +20,7 @@
   h2,
   h3,
   h4 {
-    @apply font-display;
+    @apply font-display tracking-[-0.03em];
   }
 
   ::selection {
@@ -105,10 +105,15 @@
 }
 
 .marquee-track {
-  animation: marquee-scroll 42s linear infinite;
+  animation: marquee-scroll 46s linear infinite;
 }
 
-.marquee:hover .marquee-track {
+.marquee-track-reverse {
+  animation: marquee-scroll 58s linear infinite reverse;
+}
+
+.marquee:hover .marquee-track,
+.marquee:hover .marquee-track-reverse {
   animation-play-state: paused;
 }
 

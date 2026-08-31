@@ -72,7 +72,7 @@ export default function Hero({ ready }: { ready: boolean }) {
             Available for Internships · {profile.location}
           </motion.div>
 
-          <h1 className="text-balance font-serif text-6xl font-medium leading-[0.98] tracking-tight sm:text-7xl md:text-8xl">
+          <h1 className="text-balance font-display text-6xl font-extrabold leading-[0.92] tracking-[-0.045em] sm:text-7xl md:text-8xl">
             {["Birzaan", "Mistry"].map((word, i) => (
               <span key={word} className="block overflow-hidden pb-[0.06em]">
                 <motion.span

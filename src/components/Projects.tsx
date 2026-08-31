@@ -68,7 +68,7 @@ export default function Projects() {
                   <div className="my-6 border-t border-border pt-6">
                     <CountUp
                       value={project.stat}
-                      className="block font-serif text-4xl font-medium text-accent sm:text-5xl"
+                      className="block font-mono text-4xl font-medium tracking-[-0.03em] text-accent sm:text-5xl"
                     />
                     <p className="mt-1 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
                       {project.statCaption}
